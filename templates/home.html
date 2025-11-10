@@ -1,0 +1,457 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Inicio — Portafolio{% endblock %}
+{% block content %}
+
+<!-- HERO con identidad -->
+<section class="hero has-portada p-8 md:p-12 mb-10 relative">
+  <div class="overlay"></div>
+  <div class="grid gap-8 md:grid-cols-2 items-center relative">
+    <div>
+      
+    <h1 class="hero-title mt-3">
+  <span class="block text-5xl md:text-6xl lg:text-7xl font-semibold">
+    Marcelo Navarrete
+  </span>
+  <span class="block text-3xl md:text-4xl lg:text-5xl font-semibold">
+    Ingeniero en Administración Pública
+  </span>
+  <span class="block text-3xl md:text-4xl lg:text-5xl font-semibold">
+    Desarrollador Full-Stack
+  </span>
+</h1>
+
+<p class="mt-4 text-yellow-300 text-lg md:text-xl">
+  Soluciones digitales para resolver problemas, no crearlos.
+</p>
+
+
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
+        <a href="#resumen" class="btn btn-outline">Resumen profesional</a>
+      </div>
+    </div>
+
+   
+  </div>
+  <!-- Avatar en esquina inferior izquierda -->
+<div class="hero-avatar" aria-label="Foto de perfil">
+  <img src="{% static 'img/avatar.jpg' %}" alt="Foto de Marcelo Navarrete">
+</div>
+
+</section>
+
+<!-- SOBRE MÍ -->
+<section id="sobre-mi" class="mb-12">
+  <div class="card p-6">
+    <h2 class="section-title text-2xl mb-3">Sobre mí</h2>
+    <div class="grid gap-6 md:grid-cols-3">
+      <!-- Texto -->
+      <div class="md:col-span-2">
+  <p class="muted">
+    Soy <strong>Marcelo Navarrete</strong>, Ingeniero en Administración Pública con sólida formación en 
+    <strong>formulación y evaluación de proyectos</strong>, <strong>gestión presupuestaria</strong>, <strong>compras públicas</strong> y
+    <strong>desarrollo de soluciones digitales</strong>. Me mueven los productos útiles: claros, seguros y 
+    medibles. Aplico criterios de política pública y compliance para que la tecnología no solo funcione, 
+    sino que <em>cumpla</em> y genere valor real para personas y organizaciones.
+  </p>
+
+  <blockquote class="muted mt-3" style="border-left: 3px solid var(--brand); padding-left: .75rem;">
+  <em>Filosofía:</em> orientar cada decisión a valor público y de negocio, con evidencia, <strong>gobernanza</strong>, criterio y responsabilidad.
+  Ética sin atajos, equipos cuidados y mejora continua como sistema, no como evento.
+</blockquote>
+
+
+
+  <div class="chips mt-4">
+    <span class="chip">Formulación & Evaluación de Proyectos</span>
+    <span class="chip">Gestión de Activos & Presupuesto</span>
+    <span class="chip">Django · PostgreSQL · NGINX · CSP</span>
+    <span class="chip">Diseño de información & UX</span>
+    <span class="chip">Compliance & Documentación</span>
+    <span class="chip">Automatización & BI</span>
+  </div>
+
+  <ul class="list-disc pl-5 muted mt-4 space-y-1">
+    <li>Traducción de objetivos públicos/empresariales a productos digitales concretos.</li>
+    <li>Arquitecturas simples y mantenibles, listas para auditoría y crecimiento.</li>
+    <li>Procesos medibles: del MVP al despliegue con buenas prácticas de seguridad.</li>
+  </ul>
+
+  <div class="mt-4 flex flex-wrap gap-3">
+    <a class="btn btn-primary" href="#proyectos">Ver proyectos</a>
+    <a class="btn btn-outline" href="#resumen">Resumen profesional</a>
+  </div>
+</div>
+
+
+      <!-- Lateral (opcional imagen / datos rápidos) -->
+      <aside>
+        <div class="card p-4 h-full">
+          <h3 class="font-semibold mb-2">Fuera del código</h3>
+        <ul class="muted text-sm space-y-2">
+  <li class="flex items-start gap-2">
+    <span aria-hidden="true" class="text-base leading-6">🌍</span>
+    <span><span class="sr-only">Interés:</span> Viajar — curiosidad y apertura cultural.</span>
+  </li>
+  <li class="flex items-start gap-2">
+    <span aria-hidden="true" class="text-base leading-6">🪴</span>
+    <span><span class="sr-only">Interés:</span> Plantas/jardinería — paciencia, cuidado y constancia.</span>
+  </li>
+  <li class="flex items-start gap-2">
+    <span aria-hidden="true" class="text-base leading-6">🎸</span>
+    <span><span class="sr-only">Interés:</span> Tocar guitarra — disciplina y creatividad.</span>
+  </li>
+  <li class="flex items-start gap-2">
+  <span aria-hidden="true" class="text-base leading-6">🤝</span>
+  <span><span class="sr-only">Interés:</span> Voluntariado tech — impacto social y trabajo colaborativo.</span>
+</li>
+
+  <li class="flex items-start gap-2">
+    <span aria-hidden="true" class="text-base leading-6">🍳</span>
+    <span><span class="sr-only">Interés:</span> Cocina casera — experimentación y detalle.</span>
+  </li>
+</ul>
+
+          <!-- Si agregas una foto: coloca /static/img/avatar.jpg y descomenta
+          <img class="mt-4 rounded-xl w-full object-cover" 
+               src="{% static 'img/avatar.jpg' %}" 
+               alt="Foto de Marcelo Navarrete"> -->
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- PERFIL + RESUMEN (rediseñados) -->
+<section id="perfil" class="mb-12">
+  <div class="grid gap-6 md:grid-cols-3">
+    <!-- Columna 1: Perfil resumido -->
+    <article class="card p-6 md:col-span-2">
+      <h2 class="section-title text-2xl mb-3">Perfil profesional</h2>
+      <p class="muted">
+        Ingeniero en Administración Pública con enfoque en <strong>análisis de datos</strong>, 
+        <strong>transformación digital</strong> y <strong>desarrollo web (Django)</strong>. 
+        Experiencia liderando proyectos públicos y privados, impulsando eficiencia, cumplimiento 
+        y automatización con mentalidad producto.
+      </p>
+
+      <!-- Highlights en chips -->
+      <div class="chips mt-4">
+        <span class="chip">Django · PostgreSQL · NGINX · CSP</span>
+        <span class="chip">Autenticación / Permisos</span>
+        <span class="chip">DevOps ligero</span>
+        <span class="chip">Power BI · Excel avanzado</span>
+        <span class="chip">Design Thinking</span>
+        <span class="chip">Prospectiva</span>
+      </div>
+
+      <h3 class="font-semibold mt-6">Stack & focos</h3>
+<ul class="list-disc pl-5 muted mt-2 space-y-1">
+  <li>Backend & producto: <strong>Django</strong>, <strong>PostgreSQL</strong>, despliegue con <strong>NGINX</strong> y <strong>CSP</strong>.</li>
+  <li>Seguridad y cumplimiento: autenticación, permisos, headers y documentación para auditoría.</li>
+  <li>Operación ligera: DevOps pragmático, automatización y BI orientado a decisiones.</li>
+</ul>
+
+
+      <!-- Mini stats (scaneables) -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+        <div class="card p-4">
+          <div class="text-2xl font-semibold">5+ años</div>
+          <div class="muted text-sm">Gestión de proyectos</div>
+        </div>
+        <div class="card p-4">
+          <div class="text-2xl font-semibold">Full-Stack</div>
+          <div class="muted text-sm">Python / Django</div>
+        </div>
+        <div class="card p-4">
+          <div class="text-2xl font-semibold">Compliance</div>
+          <div class="muted text-sm">CSP & seguridad</div>
+        </div>
+        <div class="card p-4">
+          <div class="text-2xl font-semibold">Data</div>
+          <div class="muted text-sm">BI · Automatización</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Columna 2: Timeline compacta -->
+    <aside class="card p-6">
+      <h3 class="font-semibold text-lg mb-2">Trayectoria (compacta)</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span class="timeline-dot"></span>
+          <div class="font-semibold">Data Prospectiva SPA</div>
+          <div class="timeline-meta">2023–2025 · Investigación de datos, automatización y desarrollo web</div>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-dot"></span>
+          <div class="font-semibold">Proyectos públicos y privados</div>
+          <div class="timeline-meta">Gestión, compras públicas y análisis presupuestario</div>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-dot"></span>
+          <div class="font-semibold">Formación</div>
+          <div class="timeline-meta">Administración Pública · Enfoque en IA aplicada y datos</div>
+        </div>
+      </div>
+      <a class="btn btn-outline mt-4" href="#proyectos">Ver proyectos</a>
+    </aside>
+  </div>
+</section>
+
+<section id="resumen" class="mb-12">
+  <div class="card p-6">
+    <h3 class="font-semibold text-xl mb-2">Resumen profesional</h3>
+    <div class="grid md:grid-cols-2 gap-6">
+      <!-- Resumen textual (mejor jerarquía) -->
+      <div>
+        <p class="muted">
+          Más de 5 años gestionando y evaluando proyectos, con foco en resultados, 
+          <strong>seguridad/compliance</strong> y <strong>automatización</strong>. 
+          Desarrollo soluciones end-to-end con <strong>Django</strong> (modelado, CRUD, permisos,
+          despliegue en NGINX con CSP) y documentación técnica orientada a auditoría.
+        </p>
+        <ul class="list-disc pl-5 muted mt-3 space-y-1">
+          <li>Stack: Django, PostgreSQL, NGINX, headers de seguridad, CSP.</li>
+          <li>Data: ETL simple, BI (Power BI), Excel avanzado.</li>
+          <li>Mentalidad producto: priorización, prototipos y mejora continua.</li>
+        </ul>
+
+        <div class="mt-4 flex flex-wrap gap-3">
+          <a class="btn btn-primary" href="#proyectos">Ver proyectos</a>
+          <a class="btn btn-outline" href="#stack">Stack & focos</a>
+        </div>
+      </div>
+
+      <!-- Tarjetas de valor (3 bullets claros) -->
+      <div class="grid gap-4">
+        <div class="card p-4">
+          <h4 class="font-semibold">Full-Stack pragmático</h4>
+          <p class="muted text-sm">ORM limpio, vistas/plantillas cuidadas, pruebas mínimas y despliegue reproducible.</p>
+        </div>
+        <div class="card p-4">
+          <h4 class="font-semibold">Compliance por diseño</h4>
+          <p class="muted text-sm">CSP, headers y documentación para auditorías y trazabilidad.</p>
+        </div>
+        <div class="card p-4">
+          <h4 class="font-semibold">Data-driven</h4>
+          <p class="muted text-sm">Dashboards y automatización para decisiones rápidas y medibles.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- POSTÍTULOS, CAPACITACIONES Y CERTIFICACIONES -->
+<section id="formacion" class="mb-12">
+  <div class="card p-6 relative">
+    <h2 class="section-title text-2xl mb-4">Postítulos, capacitaciones y certificaciones</h2>
+
+    <!-- Grid de tarjetas -->
+   <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+
+  <article class="card p-4">
+    <h3 class="font-semibold">Diplomado en Gestión Pública</h3>
+    <p class="muted text-sm">Universidad del Desarrollo · 2023</p>
+    <ul class="muted text-sm mt-2 space-y-1">
+      <li>Gobernanza, presupuesto y control de gestión.</li>
+      <li>Políticas públicas y evaluación de resultados.</li>
+    </ul>
+    <!-- <a class="btn btn-outline mt-3" href="#" target="_blank" rel="noopener">Ver credencial</a> -->
+  </article>
+
+  <article class="card p-4">
+    <h3 class="font-semibold">Diplomado en Diseño y Gestión Ágil de Proyectos</h3>
+    <p class="muted text-sm">Universidad de Playa Ancha · 2024</p>
+    <ul class="muted text-sm mt-2 space-y-1">
+      <li>Agilidad: Scrum, Kanban y entrega iterativa.</li>
+      <li>Gestión de riesgos, alcance y stakeholders.</li>
+    </ul>
+  </article>
+
+  <article class="card p-4">
+    <h3 class="font-semibold">Diplomado en Marketing Digital y Gestión Estratégica</h3>
+    <p class="muted text-sm">AIEP · 2024</p>
+    <ul class="muted text-sm mt-2 space-y-1">
+      <li>Estrategia digital, performance y analítica.</li>
+      <li>Posicionamiento, contenidos y embudos.</li>
+    </ul>
+  </article>
+
+  <article class="card p-4">
+    <h3 class="font-semibold">Diplomado en Emprendimiento y Gestión Digital</h3>
+    <p class="muted text-sm">IP Chile · 2024</p>
+    <ul class="muted text-sm mt-2 space-y-1">
+      <li>Modelos de negocio, métricas y escalabilidad.</li>
+      <li>Operación digital y automatización ligera.</li>
+    </ul>
+  </article>
+
+  <article class="card p-4">
+    <h3 class="font-semibold">Certificación Profesional en Análisis de Datos</h3>
+    <p class="muted text-sm">Google · 2024</p>
+    <ul class="muted text-sm mt-2 space-y-1">
+      <li>Excel/Sheets, SQL básico y visualización.</li>
+      <li>ETL simple y toma de decisiones con datos.</li>
+    </ul>
+    <!-- <a class="btn btn-outline mt-3" href="#" target="_blank" rel="noopener">Ver credencial</a> -->
+  </article>
+
+  <article class="card p-4">
+    <h3 class="font-semibold">Bootcamp Python / Django</h3>
+    <p class="muted text-sm">Skillnest · 2025</p>
+    <ul class="muted text-sm mt-2 space-y-1">
+      <li>Full-stack Django: modelado, CRUD, auth/permisos.</li>
+      <li>Despliegue con NGINX + CSP y documentación técnica.</li>
+    </ul>
+    <!-- <a class="btn btn-outline mt-3" href="#" target="_blank" rel="noopener">Repositorio / credencial</a> -->
+  </article>
+
+</div>
+
+  <!-- Trigger "Ver +" inferior derecha -->
+<button id="btn-ver-mas-formacion"
+        class="absolute bottom-3 right-4 text-sm font-medium underline-offset-2 hover:underline">
+  Ver +
+</button>
+
+</section>
+
+
+
+
+<!-- PROYECTOS DESTACADOS -->
+<section id="proyectos" class="mb-12">
+  <h2 class="section-title text-2xl mb-4">Proyectos destacados</h2>
+  <div class="projects">
+
+    <!-- 1 -->
+    <article class="card p-4">
+      <div class="project-img">Pantallazo del proyecto</div>
+      <h3 class="font-semibold text-lg mt-3">Gestión de Productos (M6_AE6)</h3>
+      <p class="muted text-sm mt-1">CRUD de productos y categorías.</p>
+      <div class="mt-2 flex flex-wrap gap-2 text-xs">
+        <span class="badge">Django</span><span class="badge">SQLite</span>
+      </div>
+      <div class="mt-3 flex gap-2">
+        <a class="btn btn-outline" target="_blank" href="https://github.com/marchnav/M6_AE6_gestion_productos">GitHub</a>
+        <a class="btn btn-primary" href="/proyectos/m6-ae6-gestion-productos/">Ver detalle</a>
+      </div>
+    </article>
+
+    <!-- 2 -->
+    <article class="card p-4">
+      <div class="project-img">Pantallazo del proyecto</div>
+      <h3 class="font-semibold text-lg mt-3">Eventos (django_eventos)</h3>
+      <p class="muted text-sm mt-1">Gestión de eventos con autenticación.</p>
+      <div class="mt-2 flex flex-wrap gap-2 text-xs">
+        <span class="badge">Django</span>
+      </div>
+      <div class="mt-3 flex gap-2">
+        <a class="btn btn-outline" target="_blank" href="https://github.com/marchnav/django_eventos">GitHub</a>
+        <a class="btn btn-primary" href="/proyectos/django-eventos/">Ver detalle</a>
+      </div>
+    </article>
+
+    <!-- 3 -->
+    <article class="card p-4">
+      <div class="project-img">Pantallazo del proyecto</div>
+      <h3 class="font-semibold text-lg mt-3">Condominio</h3>
+      <p class="muted text-sm mt-1">Plataforma de gestión para condominio.</p>
+      <div class="mt-2 flex flex-wrap gap-2 text-xs">
+        <span class="badge">Django</span>
+      </div>
+      <div class="mt-3 flex gap-2">
+        <a class="btn btn-outline" target="_blank" href="https://github.com/marchnav/condominio">GitHub</a>
+        <a class="btn btn-primary" href="/proyectos/condominio/">Ver detalle</a>
+      </div>
+    </article>
+
+    <!-- 4 -->
+    <article class="card p-4">
+      <div class="project-img">Pantallazo del proyecto</div>
+      <h3 class="font-semibold text-lg mt-3">Inventario (M7 Evaluación)</h3>
+      <p class="muted text-sm mt-1">Gestor de inventario.</p>
+      <div class="mt-2 flex flex-wrap gap-2 text-xs">
+        <span class="badge">Django</span>
+      </div>
+      <div class="mt-3 flex gap-2">
+        <a class="btn btn-outline" target="_blank" href="https://github.com/marchnav/M7_EVALUACION_MODULO_INVENTARIO_DJANGO">GitHub</a>
+        <a class="btn btn-primary" href="/proyectos/m7-evaluacion-inventario/">Ver detalle</a>
+      </div>
+    </article>
+
+    <!-- 5 -->
+    <article class="card p-4">
+      <div class="project-img">Pantallazo del proyecto</div>
+      <h3 class="font-semibold text-lg mt-3">M7_AE6</h3>
+      <p class="muted text-sm mt-1">Proyecto alineado a rúbrica M7.</p>
+      <div class="mt-2 flex flex-wrap gap-2 text-xs">
+        <span class="badge">Django</span>
+      </div>
+      <div class="mt-3 flex gap-2">
+        <a class="btn btn-outline" target="_blank" href="https://github.com/marchnav/M7_AE6">GitHub</a>
+        <a class="btn btn-primary" href="/proyectos/m7-ae6/">Ver detalle</a>
+      </div>
+    </article>
+
+    <!-- 6 -->
+    <article class="card p-4">
+      <div class="project-img">Pantallazo del proyecto</div>
+      <h3 class="font-semibold text-lg mt-3">Gestor de Tareas (M6)</h3>
+      <p class="muted text-sm mt-1">CRUD de tareas con estados y filtros.</p>
+      <div class="mt-2 flex flex-wrap gap-2 text-xs">
+        <span class="badge">Django</span>
+      </div>
+      <div class="mt-3 flex gap-2">
+        <a class="btn btn-outline" target="_blank" href="https://github.com/marchnav/M6_evaluacion_modulo_GESTOR_TAREAS">GitHub</a>
+        <a class="btn btn-primary" href="/proyectos/m6-gestor-tareas/">Ver detalle</a>
+      </div>
+    </article>
+
+    <!-- 7 -->
+    <article class="card p-4">
+      <div class="project-img">Pantallazo del proyecto</div>
+      <h3 class="font-semibold text-lg mt-3">Agenda de Servicios (M6)</h3>
+      <p class="muted text-sm mt-1">Reservas multi-servicio.</p>
+      <div class="mt-2 flex flex-wrap gap-2 text-xs">
+        <span class="badge">Django</span>
+      </div>
+      <div class="mt-3 flex gap-2">
+        <a class="btn btn-outline" target="_blank" href="https://github.com/marchnav/M6_evaluacion_de_portafolio_AGENDA_SERVICIOS">GitHub</a>
+        <a class="btn btn-primary" href="/proyectos/m6-agenda-servicios/">Ver detalle</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+<!-- Modal: Formación adicional -->
+<div id="modal-formacion"
+     class="fixed inset-0 z-50 hidden">
+  <!-- Fondo -->
+  <div class="absolute inset-0 bg-black/60"></div>
+
+  <!-- Contenido -->
+  <div class="relative z-10 mx-auto mt-16 w-[92%] max-w-2xl">
+    <div class="card p-6">
+      <div class="flex items-start justify-between gap-4">
+        <h3 class="font-semibold text-lg">Formación adicional</h3>
+        <button id="modal-formacion-close" class="btn btn-outline text-sm px-3 py-1">Cerrar</button>
+      </div>
+      <ul class="muted text-sm mt-4 space-y-2 list-disc pl-5">
+        <li><strong>Gestión presupuestaria, contabilidad gubernamental y NICSP</strong> en el sector público chileno. 30 hrs. Pontificia Universidad Católica de Chile.</li>
+        <li><strong>Control de la gestión pública</strong>. 50 hrs. OTEC JCCD – Sence.</li>
+        <li><strong>Certificación avanzada en compras públicas</strong>, 88 hrs. Otorgado por Dirección ChileCompra.</li>
+        <li><strong>Fundamentos profesionales para el análisis de datos</strong>. 11 hrs. Otorgado por Microsoft.</li>
+        <li><strong>IEEM y el diseño de políticas públicas e inversiones basadas en datos</strong>. 30 hrs. Otorgado por el BID.</li>
+        <li><strong>Economía del comportamiento para mejores políticas públicas</strong>. 30 hrs. Otorgado por el BID.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

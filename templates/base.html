@@ -1,0 +1,74 @@
+{% load static %}
+<!doctype html>
+<html lang="es" class="h-full">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{% block title %}Portafolio — Marcelo Navarrete{% endblock %}</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fuente limpia y profesional: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS propio (paleta clara controlada) -->
+  <link rel="stylesheet" href="{% static 'css/app.css' %}">
+  <meta name="color-scheme" content="light">
+  <link rel="icon" href="{% static 'favicon.ico' %}">
+</head>
+<body class="min-h-full">
+  <!-- Navbar -->
+<header class="header border-b" role="banner">
+  <div class="container py-4 flex items-center justify-between">
+    <a href="/" class="font-semibold text-xl md:text-2xl tracking-tight">
+      Marcelo Navarrete <span style="color: var(--brand)">•</span>
+    </a>
+    <nav class="flex gap-6 text-base md:text-lg font-medium" aria-label="principal">
+      <a class="hover:text-[var(--brand)]" href="#sobre-mi">Sobre mí</a>
+      <a class="hover:text-[var(--brand)]" href="#perfil">Perfil profesional</a>
+      <a class="hover:text-[var(--brand)]" href="#proyectos">Proyectos destacados</a>
+      <a class="hover:text-[var(--brand)]" href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+
+  <!-- Contenido -->
+  <main class="container py-8" role="main">
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- Footer -->
+  <footer id="contacto" class="footer border-t mt-12" role="contentinfo">
+    <div class="container py-8 grid gap-4 md:grid-cols-3 text-sm">
+      <div>
+        <p class="font-semibold">Marcelo Navarrete</p>
+        <p class="muted">Full-Stack (Django) · IA aplicada · Compliance</p>
+      </div>
+      <div>
+        <p class="font-semibold">Enlaces</p>
+        <ul class="mt-2 space-y-1">
+          <li><a class="hover:text-[var(--brand)]" href="#perfil">Perfil profesional</a></li>
+          <li><a class="hover:text-[var(--brand)]" href="#proyectos">Proyectos destacados</a></li>
+          <li><a class="hover:text-[var(--brand)]" href="#resumen">Resumen profesional</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold">Contacto</p>
+        <p class="muted">Correo: <a class="hover:text-[var(--brand)]" href="mailto:marcelonavarretey@gmail.com">marcelonavarretey@gmail.com</a></p>
+      </div>
+    </div>
+    <div class="border-t" style="border-color: var(--border);">
+      <div class="container py-4 text-xs muted">
+        © {{ now|date:"Y" }} Marcelo Navarrete — Portafolio.
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS propio -->
+  <script src="{% static 'js/app.js' %}"></script>
+</body>
+</html>
