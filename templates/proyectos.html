@@ -6,18 +6,18 @@
   <h1 class="section-title text-2xl mb-4">Proyectos destacados</h1>
 
   <!-- TEST TEMPORAL: debe mostrar la portada de "condominio" sí o sí -->
-  <img src="/static/img/projects/condominio-cover.jpg"
+  <img src="{% static 'img/proyectos/condominio-cover.jpg' %}"
        alt="TEST condominio"
        style="width:100%;max-width:480px;height:200px;object-fit:cover;border:2px solid #8B5CF6;border-radius:12px;margin-bottom:12px;" />
 
   <div class="projects">
     {% for p in proyectos %}
     <article class="card p-4">
-      <!-- Portada local por convención: static/img/projects/<slug>-cover.jpg -->
+      <!-- Portada local por convención: static/img/proyectos/<slug>-cover.jpg -->
       <img
-        src="{% static 'img/projects/' %}{{ p.slug }}-cover.jpg"
+        class="w-full h-[180px] rounded-lg object-cover border border-[var(--border)]"
+        src="{% static 'img/proyectos/' %}{{ p.slug }}-cover.jpg"
         alt="Portada de {{ p.titulo }}"
-        style="width:100%; height:160px; object-fit:cover; border-radius:12px; border:1px dashed #DDD6FE;"
       />
 
       <h2 class="font-semibold text-lg mt-3">{{ p.titulo }}</h2>

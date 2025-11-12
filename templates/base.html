@@ -14,27 +14,53 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <!-- CSS propio (paleta clara controlada) -->
+  <!-- CSS propio -->
   <link rel="stylesheet" href="{% static 'css/app.css' %}">
   <meta name="color-scheme" content="light">
   <link rel="icon" href="{% static 'favicon.ico' %}">
 </head>
 <body class="min-h-full">
   <!-- Navbar -->
-<header class="header border-b" role="banner">
-  <div class="container py-4 flex items-center justify-between">
-    <a href="/" class="font-semibold text-xl md:text-2xl tracking-tight">
-      Marcelo Navarrete <span style="color: var(--brand)">•</span>
-    </a>
-    <nav class="flex gap-6 text-base md:text-lg font-medium" aria-label="principal">
-      <a class="hover:text-[var(--brand)]" href="#sobre-mi">Sobre mí</a>
-      <a class="hover:text-[var(--brand)]" href="#perfil">Perfil profesional</a>
-      <a class="hover:text-[var(--brand)]" href="#proyectos">Proyectos destacados</a>
-      <a class="hover:text-[var(--brand)]" href="#contacto">Contacto</a>
-    </nav>
-  </div>
-</header>
+  <header class="header border-b" role="banner">
+    <div class="container py-4 flex items-center justify-between">
+      <!-- Brand -->
+      <a href="/" class="font-semibold text-xl md:text-2xl tracking-tight">
+        Marcelo Navarrete <span style="color: var(--brand)">•</span>
+      </a>
 
+      <!-- Botón hamburguesa (solo móvil) -->
+      <button id="nav-toggle"
+              class="md:hidden inline-flex items-center justify-center p-2 rounded-lg border border-[var(--border)]"
+              aria-label="Abrir menú"
+              aria-controls="mobile-menu"
+              aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M4 7h16M4 12h16M4 17h16" />
+        </svg>
+      </button>
+
+      <!-- Nav desktop -->
+      <!-- Nav desktop -->
+<nav class="hidden md:flex gap-6 text-base font-medium" aria-label="principal">
+  <a class="hover:text-[var(--brand)]" href="/#sobre-mi">Sobre mí</a>
+  <a class="hover:text-[var(--brand)]" href="/#perfil">Perfil profesional</a>
+  <a class="hover:text-[var(--brand)]" href="/#formacion">Formación</a>
+  <a class="hover:text-[var(--brand)]" href="/#proyectos">Proyectos destacados</a>
+  <a class="hover:text-[var(--brand)]" href="/#contacto">Contacto</a>
+</nav>
+
+<!-- Menú móvil -->
+<div id="mobile-menu" class="md:hidden hidden border-t" aria-label="principal móvil">
+  <div class="container py-3 grid gap-2 text-base font-medium">
+    <a class="hover:text-[var(--brand)]" href="/#sobre-mi">Sobre mí</a>
+    <a class="hover:text-[var(--brand)]" href="/#perfil">Perfil profesional</a>
+    <a class="hover:text-[var(--brand)]" href="/#formacion">Formación</a>
+    <a class="hover:text-[var(--brand)]" href="/#proyectos">Proyectos destacados</a>
+    <a class="hover:text-[var(--brand)]" href="/#contacto">Contacto</a>
+  </div>
+</div>
+
+  </header>
 
   <!-- Contenido -->
   <main class="container py-8" role="main">

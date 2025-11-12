@@ -1,31 +1,45 @@
-/* ===== Tema oscuro elegante (inspirado en el mock) ===== */
+/* ===========================
+   Tema oscuro elegante (base)
+   =========================== */
 :root{
-  /* Base */
-  --bg: #0B1020;            /* fondo principal muy oscuro azulado */
-  --bg-2: #0F1629;          /* paneles / secciones */
-  --surface: #11182E;       /* tarjetas */
-  --text: #E6E8F1;          /* texto principal */
-  --muted: #A0A8C0;         /* texto secundario */
-  --border: #1E2745;        /* bordes sutiles */
+  /* Colores */
+  --bg: #0B1020;
+  --bg-2: #0F1629;
+  --surface: #11182E;
+  --text: #E6E8F1;
+  --muted: #A0A8C0;
+  --border: #1E2745;
 
   /* Marca */
-  --brand: #8B5CF6;         /* violeta institucional */
-  --brand-2: #6D28D9;       /* violeta profundo */
-  --accent: #22D3EE;        /* cian tenue p/ detalles */
+  --brand: #8B5CF6;
+  --brand-2: #6D28D9;
+  --accent: #22D3EE;
 
-  /* Sombras */
+  /* Sombra */
   --shadow: 0 18px 45px rgba(0,0,0,.35);
   --shadow-sm: 0 10px 28px rgba(0,0,0,.28);
+
+  /* Fuente */
+  --font-primary: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
 }
 
-/* Reset básico */
+/* ===========================
+   Reset / Layout
+   =========================== */
 html, body{
-  background: radial-gradient(1200px 700px at 10% -10%, rgba(34,211,238,.06), transparent 55%),
-              radial-gradient(1100px 700px at 110% 10%, rgba(139,92,246,.10), transparent 60%),
-              var(--bg);
+  background:
+    radial-gradient(1200px 700px at 10% -10%, rgba(34,211,238,.06), transparent 55%),
+    radial-gradient(1100px 700px at 110% 10%, rgba(139,92,246,.10), transparent 60%),
+    var(--bg);
   color: var(--text);
+  font-family: var(--font-primary);
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
 }
+
 a{ color: inherit; text-decoration: none; }
 a:hover, a:focus{ outline: none; }
 
@@ -41,13 +55,28 @@ a:hover, a:focus{ outline: none; }
   background: linear-gradient(180deg, rgba(255,255,255,0), rgba(255,255,255,.02));
   border-color: var(--border);
 }
+.header a{ font-weight: 500; }
 .header a:hover{ color: var(--brand); }
 
-/* Tipografía utilitaria */
+/* ===========================
+   Tipografía utilitaria
+   =========================== */
 .section-title{ font-weight: 800; letter-spacing: -.02em; }
-.muted{ color: var(--muted); }
+.muted{ color: var(--muted); opacity: .78; }
+h1, h2, h3{
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+.hero-title{
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+}
 
-/* Tarjetas */
+/* ===========================
+   Componentes UI
+   =========================== */
 .card{
   background: linear-gradient(180deg, var(--surface), #0E1530);
   border: 1px solid var(--border);
@@ -55,10 +84,18 @@ a:hover, a:focus{ outline: none; }
   box-shadow: var(--shadow-sm);
   transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
 }
-.card:hover{ transform: translateY(-2px); box-shadow: var(--shadow); border-color: #2A3560; }
+.card:hover{
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+  border-color: #2A3560;
+}
 
-/* Botones */
-.btn{ border-radius: 9999px; padding: .7rem 1.15rem; display: inline-block; font-weight: 600; }
+.btn{
+  display: inline-block;
+  border-radius: 9999px;
+  padding: .7rem 1.15rem;
+  font-weight: 600;
+}
 .btn-primary{
   color: #0B1020;
   background: linear-gradient(135deg, var(--brand), var(--brand-2));
@@ -73,7 +110,6 @@ a:hover, a:focus{ outline: none; }
 }
 .btn-ghost{ background: transparent; border: 0; color: var(--brand); }
 
-/* Badges/Chips */
 .badge{
   border: 1px solid var(--border);
   border-radius: 9999px;
@@ -83,7 +119,50 @@ a:hover, a:focus{ outline: none; }
   background: #0E1430;
 }
 
-/* ===== HERO ===== */
+/* Chips */
+.chips{ display: flex; flex-wrap: wrap; gap: .5rem; }
+.chip{
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 999px;
+  padding: .35rem .75rem;
+  font-weight: 500;
+  font-size: .85rem;
+}
+
+/* Timeline compacta */
+.timeline{ position: relative; }
+.timeline::before{
+  content: "";
+  position: absolute; left: 10px; top: .25rem; bottom: .25rem;
+  width: 2px; background: rgba(255,255,255,.12);
+}
+.timeline-item{ position: relative; padding-left: 2.25rem; margin: .75rem 0; }
+.timeline-dot{
+  position: absolute; left: 4px; top: .4rem;
+  width: 12px; height: 12px; border-radius: 999px;
+  background: var(--accent);
+  box-shadow: 0 0 0 3px rgba(34,211,238,.15);
+}
+.timeline-meta{ opacity: .8; font-size: .8rem; }
+
+/* CTA band */
+.cta-band{
+  background: linear-gradient(135deg, rgba(139,92,246,.12), rgba(34,211,238,.12));
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+}
+
+/* Nav link activo (si usas .is-active) */
+.nav-link{ padding: .5rem .8rem; border-radius: .7rem; }
+.nav-link.is-active{
+  background: #1A2142; color: #EDEBFF;
+  box-shadow: inset 0 0 0 1px #2A3560;
+}
+
+/* ===========================
+   HERO (fondo + overlay + layout)
+   =========================== */
 .hero{
   position: relative;
   border-radius: 1.25rem;
@@ -95,171 +174,77 @@ a:hover, a:focus{ outline: none; }
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
 }
-.hero-title{
-  font-weight: 900;
-  line-height: 1.04;
-  letter-spacing: -.025em;
-  font-size: clamp(2rem, 3.6vw, 3.4rem);
-}
-.hero .pill{
-  display: inline-flex; align-items: center; gap: .5rem;
-  background: #0E1430; color: var(--muted);
-  border: 1px solid var(--border);
-  border-radius: 9999px;
-  padding: .4rem .8rem; font-size: .8rem;
-}
-.hero .pill .dot{
-  width: .55rem; height: .55rem; border-radius: 9999px;
-  background: var(--brand);
-  box-shadow: 0 0 18px rgba(139,92,246,.8);
-}
 
-/* ===== Grid de proyectos ===== */
-.projects{ display: grid; gap: 1rem; grid-template-columns: repeat(1,1fr); }
-@media (min-width: 640px){ .projects{ grid-template-columns: repeat(2,1fr); } }
-@media (min-width: 1024px){ .projects{ grid-template-columns: repeat(3,1fr); } }
-
-/* Holder para pantallazos */
-.project-img{
-  height: 180px;
-  border-radius: .9rem;
-  background-color: #0E1430;
-  border: 1px dashed #28315A;
-  display: grid; place-items: center;
-  color: #CAD0E6; font-size: .85rem;
-}
-
-/* Navbar active link (usa clase .is-active en el <a>) */
-.nav-link{ padding: .5rem .8rem; border-radius: .7rem; }
-.nav-link.is-active{
-  background: #1A2142; color: #EDEBFF;
-  box-shadow: inset 0 0 0 1px #2A3560;
-}
-
-/* Banda CTA / resumen */
-.cta-band{
-  background: linear-gradient(135deg, rgba(139,92,246,.12), rgba(34,211,238,.12));
-  border: 1px solid var(--border);
-  border-radius: 1rem;
-}
-
-/* === HERO portada (home) === */
-.hero.has-portada {
-  background-image: url('../img/portada_definitiva_x.png'); /* desde css/ a img/ */
+/* Imagen de portada */
+.hero.has-portada{
+  background-image: url('../img/portada_definitiva_x.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  position: relative;
+  /* Holgura inferior para que el avatar no tape botones en móvil */
+  padding-bottom: 7.5rem;
+  min-height: 70vh;
 }
-
-.hero.has-portada .overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.35); /* oscurece para legibilidad */
+.hero.has-portada .overlay{
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,.35);
   pointer-events: none;
 }
 
-/* Altura responsiva del HERO */
-.hero.has-portada {
-  min-height: 55vh;   /* móviles/tabla */
+/* Botones del hero por encima de cualquier solape */
+.hero .btn{ position: relative; z-index: 20; }
+
+/* Altura/holgura en pantallas mayores */
+@media (min-width: 768px){
+  .hero.has-portada{ padding-bottom: 2rem; }
+}
+@media (min-width: 1024px){
+  .hero.has-portada{ min-height: 80vh; }
 }
 
-@media (min-width: 1024px) {
-  .hero.has-portada {
-    min-height: 65vh; /* desktops grandes */
-  }
-}
-
-/* --- Chips (highlights) --- */
-.chips { display: flex; flex-wrap: wrap; gap: .5rem; }
-.chip {
-  background: rgba(255,255,255,.06);
-  border: 1px solid rgba(255,255,255,.08);
-  border-radius: 999px;
-  padding: .35rem .75rem;
-  font-size: .85rem;
-}
-
-/* --- Mini timeline vertical --- */
-.timeline { position: relative; }
-.timeline::before {
-  content: "";
+/* Avatar circular en el hero (esquina inferior izquierda) */
+.hero-avatar{
   position: absolute;
-  left: 10px;
-  top: .25rem;
-  bottom: .25rem;
-  width: 2px;
-  background: rgba(255,255,255,.12);
-}
-.timeline-item { position: relative; padding-left: 2.25rem; margin: .75rem 0; }
-.timeline-dot {
-  position: absolute; left: 4px; top: .4rem;
-  width: 12px; height: 12px; border-radius: 999px;
-  background: var(--accent, #22d3ee);
-  box-shadow: 0 0 0 3px rgba(34,211,238,.15);
-}
-.timeline-meta { opacity: .8; font-size: .8rem; }
-
-/* === Tipografía global: Inter más liviana y legible === */
-:root{
-  --font-primary: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
-}
-
-html, body{
-  font-family: var(--font-primary);
-  font-weight: 400;               /* peso base más liviano */
-  line-height: 1.6;               /* mejor legibilidad en párrafos */
-  letter-spacing: 0;              /* evita exceso de tracking */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* Titulares con presencia pero sin verse 'pesados' */
-h1, h2, h3{
-  font-weight: 600;               /* semibold elegante */
-  line-height: 1.25;
-  letter-spacing: -0.01em;
-}
-
-/* H1 del hero: un pelín más compacto */
-.hero-title{
-  font-weight: 600;
-  line-height: 1.15;
-  letter-spacing: -0.015em;
-}
-
-/* Ajustes ligeros de elementos de UI */
-.header a{ font-weight: 500; }         /* marca y links menos gruesos */
-.btn, .badge, .chip{ font-weight: 500; }/* controles consistentes */
-.muted{ opacity: .78; }                 /* copy secundario más fino */
-
-
-/* === Avatar circular fijo en el HERO (esquina inferior izquierda) === */
-.hero-avatar {
-  position: absolute;
-  left: 4rem;
+  left: 2rem;            /* alineado con p-8 del section */
   bottom: 1rem;
-  z-index: 10;                 /* por encima del overlay */
-  width: 96px;
-  height: 96px;
-  border-radius: 9999px;       /* círculo perfecto */
+  z-index: 10;
+  width: 84px; height: 84px;   /* móvil más pequeño */
+  border-radius: 9999px;
   overflow: hidden;
   border: 2px solid rgba(255,255,255,.85);
   box-shadow: 0 10px 25px rgba(0,0,0,.35);
   backdrop-filter: saturate(120%) blur(0px);
 }
+.hero-avatar img{
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center;
+}
+@media (min-width: 768px){
+  .hero-avatar{ width: 120px; height: 120px; left: 3rem; } /* md:p-12 */
+}
+@media (min-width: 1024px){
+  .hero-avatar{ width: 148px; height: 148px; left: 3rem; }
+}
 
-.hero-avatar img {
+/* ===========================
+   Proyectos (grid placeholder)
+   =========================== */
+/* Proyectos: grid fluida y a prueba de “quiebres” */
+.projects{
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+.project-img{
   width: 100%;
-  height: 100%;
-  object-fit: cover;           /* centra y recorta sin deformar */
-  object-position: center;
+  height: 180px;
+  border-radius: .9rem;
+  background-color: #0E1430;
+  border: 1px dashed #28315A;
+  display: grid;
+  place-items: center;
+  color: #CAD0E6;
+  font-size: .85rem;
 }
+.card{ min-width: 0; } /* evita desbordes de contenido dentro de las tarjetas */
 
-/* Escalado responsivo */
-@media (min-width: 768px) {
-  .hero-avatar { width: 120px; height: 120px; }
-}
-@media (min-width: 1024px) {
-  .hero-avatar { width: 148px; height: 148px; }
-}
