@@ -1,250 +1,127 @@
-/* ===========================
-   Tema oscuro elegante (base)
-   =========================== */
+/* ===== Variables & base ===== */
 :root{
-  /* Colores */
-  --bg: #0B1020;
-  --bg-2: #0F1629;
-  --surface: #11182E;
-  --text: #E6E8F1;
-  --muted: #A0A8C0;
-  --border: #1E2745;
-
-  /* Marca */
-  --brand: #8B5CF6;
-  --brand-2: #6D28D9;
-  --accent: #22D3EE;
-
-  /* Sombra */
-  --shadow: 0 18px 45px rgba(0,0,0,.35);
-  --shadow-sm: 0 10px 28px rgba(0,0,0,.28);
-
-  /* Fuente */
-  --font-primary: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  --brand:#8B5CF6;          /* morado institucional */
+  --accent:#F59E0B;         /* amarillo/acento */
+  --bg:#0b0c10;             /* fondo suave */
+  --card:#111218;           /* cartas */
+  --text:#e5e7eb;           /* texto principal */
+  --muted:#9CA3AF;          /* texto secundario */
+  --border:#23242c;         /* bordes */
 }
 
-/* ===========================
-   Reset / Layout
-   =========================== */
-html, body{
-  background:
-    radial-gradient(1200px 700px at 10% -10%, rgba(34,211,238,.06), transparent 55%),
-    radial-gradient(1100px 700px at 110% 10%, rgba(139,92,246,.10), transparent 60%),
-    var(--bg);
-  color: var(--text);
-  font-family: var(--font-primary);
-  font-weight: 400;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  scroll-behavior: smooth;
-}
+html,body{background:var(--bg); color:var(--text);}
+a{transition:color .2s ease, opacity .2s ease;}
+img{border-radius: .75rem}
 
-a{ color: inherit; text-decoration: none; }
-a:hover, a:focus{ outline: none; }
+/* ===== Helpers ===== */
+.muted{color:var(--muted);}
+.section-title{font-weight:600}
 
-.container{ max-width: 72rem; margin-inline: auto; padding-inline: 1rem; }
+/* ===== Header/Footer ===== */
+.header, .footer{background:transparent}
+.header .border-b, .footer .border-t, .border-t{border-color:var(--border)}
 
-/* Header / Footer */
-.header{
-  background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0));
-  backdrop-filter: saturate(120%) blur(6px);
-  border-color: var(--border);
-}
-.footer{
-  background: linear-gradient(180deg, rgba(255,255,255,0), rgba(255,255,255,.02));
-  border-color: var(--border);
-}
-.header a{ font-weight: 500; }
-.header a:hover{ color: var(--brand); }
-
-/* ===========================
-   Tipografía utilitaria
-   =========================== */
-.section-title{ font-weight: 800; letter-spacing: -.02em; }
-.muted{ color: var(--muted); opacity: .78; }
-h1, h2, h3{
-  font-weight: 600;
-  line-height: 1.25;
-  letter-spacing: -0.01em;
-}
-.hero-title{
-  font-weight: 600;
-  line-height: 1.15;
-  letter-spacing: -0.015em;
-}
-
-/* ===========================
-   Componentes UI
-   =========================== */
+/* ===== Cards ===== */
 .card{
-  background: linear-gradient(180deg, var(--surface), #0E1530);
-  border: 1px solid var(--border);
-  border-radius: 1rem;
-  box-shadow: var(--shadow-sm);
-  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
-}
-.card:hover{
-  transform: translateY(-2px);
-  box-shadow: var(--shadow);
-  border-color: #2A3560;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:1rem;
+  box-shadow:0 10px 30px rgba(0,0,0,.15);
 }
 
-.btn{
-  display: inline-block;
-  border-radius: 9999px;
-  padding: .7rem 1.15rem;
-  font-weight: 600;
-}
-.btn-primary{
-  color: #0B1020;
-  background: linear-gradient(135deg, var(--brand), var(--brand-2));
-  border: none;
-  box-shadow: 0 10px 30px rgba(139,92,246,.35);
-}
-.btn-primary:hover{ filter: brightness(.97); }
-.btn-outline{
-  border: 1px solid var(--border);
-  background: #0F1629;
-  color: var(--text);
-}
-.btn-ghost{ background: transparent; border: 0; color: var(--brand); }
-
+/* ===== Badges / Chips ===== */
 .badge{
-  border: 1px solid var(--border);
-  border-radius: 9999px;
-  padding: .28rem .65rem;
-  font-size: .75rem;
-  color: var(--muted);
-  background: #0E1430;
+  display:inline-block;
+  padding:.25rem .5rem;
+  border:1px solid var(--border);
+  border-radius:.5rem;
+  font-size:.75rem;
+  color:var(--muted);
+  background:rgba(255,255,255,.03);
 }
-
-/* Chips */
-.chips{ display: flex; flex-wrap: wrap; gap: .5rem; }
+.chips{display:flex; flex-wrap:wrap; gap:.5rem}
 .chip{
-  background: rgba(255,255,255,.06);
-  border: 1px solid rgba(255,255,255,.08);
-  border-radius: 999px;
-  padding: .35rem .75rem;
-  font-weight: 500;
-  font-size: .85rem;
+  padding:.35rem .6rem;
+  border:1px solid var(--border);
+  border-radius:999px;
+  background:rgba(255,255,255,.03);
+  font-size:.8rem;
+  color:#cbd5e1;
 }
 
-/* Timeline compacta */
-.timeline{ position: relative; }
-.timeline::before{
-  content: "";
-  position: absolute; left: 10px; top: .25rem; bottom: .25rem;
-  width: 2px; background: rgba(255,255,255,.12);
+/* ===== Buttons ===== */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:.6rem .9rem; border-radius:.75rem;
+  font-weight:600; font-size:.95rem; line-height:1;
+  border:1px solid transparent;
+  transition:transform .08s ease, box-shadow .2s ease, background .2s, color .2s;
+  will-change:transform;
 }
-.timeline-item{ position: relative; padding-left: 2.25rem; margin: .75rem 0; }
-.timeline-dot{
-  position: absolute; left: 4px; top: .4rem;
-  width: 12px; height: 12px; border-radius: 999px;
-  background: var(--accent);
-  box-shadow: 0 0 0 3px rgba(34,211,238,.15);
+.btn:active{transform:translateY(1px)}
+.btn-primary{
+  background:linear-gradient(135deg, var(--brand), #6D28D9);
+  color:white; border-color:#6D28D9;
+  box-shadow:0 8px 20px rgba(139,92,246,.35);
 }
-.timeline-meta{ opacity: .8; font-size: .8rem; }
+.btn-primary:hover{box-shadow:0 10px 28px rgba(139,92,246,.5)}
+.btn-outline{
+  background:transparent; color:var(--text);
+  border-color:var(--border);
+}
+.btn-outline:hover{background:rgba(255,255,255,.04)}
 
-/* CTA band */
-.cta-band{
-  background: linear-gradient(135deg, rgba(139,92,246,.12), rgba(34,211,238,.12));
-  border: 1px solid var(--border);
-  border-radius: 1rem;
-}
-
-/* Nav link activo (si usas .is-active) */
-.nav-link{ padding: .5rem .8rem; border-radius: .7rem; }
-.nav-link.is-active{
-  background: #1A2142; color: #EDEBFF;
-  box-shadow: inset 0 0 0 1px #2A3560;
-}
-
-/* ===========================
-   HERO (fondo + overlay + layout)
-   =========================== */
-.hero{
-  position: relative;
-  border-radius: 1.25rem;
-  overflow: hidden;
-  background:
-    radial-gradient(1000px 500px at 0% 0%, rgba(139,92,246,.18), transparent 60%),
-    radial-gradient(900px 500px at 100% 20%, rgba(34,211,238,.18), transparent 55%),
-    linear-gradient(180deg, #0E1530 0%, #0B1020 100%);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);
-}
-
-/* Imagen de portada */
+/* ===== Hero ===== */
 .hero.has-portada{
-  background-image: url('../img/portada_definitiva_x.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  /* Holgura inferior para que el avatar no tape botones en móvil */
-  padding-bottom: 7.5rem;
-  min-height: 70vh;
+  background:
+    radial-gradient(1200px 400px at 10% -10%, rgba(139,92,246,.25), transparent 60%),
+    radial-gradient(1000px 500px at 110% 10%, rgba(245,158,11,.18), transparent 60%);
+  border:1px solid var(--border);
+  border-radius:1rem;
+  position:relative;
+  overflow:hidden;
 }
-.hero.has-portada .overlay{
-  position: absolute; inset: 0;
-  background: rgba(0,0,0,.35);
-  pointer-events: none;
+.hero .overlay{
+  position:absolute; inset:0;
+  background:linear-gradient(180deg, rgba(0,0,0,.05), rgba(0,0,0,.15));
+  pointer-events:none;
 }
-
-/* Botones del hero por encima de cualquier solape */
-.hero .btn{ position: relative; z-index: 20; }
-
-/* Altura/holgura en pantallas mayores */
-@media (min-width: 768px){
-  .hero.has-portada{ padding-bottom: 2rem; }
-}
-@media (min-width: 1024px){
-  .hero.has-portada{ min-height: 80vh; }
-}
-
-/* Avatar circular en el hero (esquina inferior izquierda) */
+.hero-title span{letter-spacing:-0.02em}
 .hero-avatar{
-  position: absolute;
-  left: 2rem;            /* alineado con p-8 del section */
-  bottom: 1rem;
-  z-index: 10;
-  width: 84px; height: 84px;   /* móvil más pequeño */
-  border-radius: 9999px;
-  overflow: hidden;
-  border: 2px solid rgba(255,255,255,.85);
-  box-shadow: 0 10px 25px rgba(0,0,0,.35);
-  backdrop-filter: saturate(120%) blur(0px);
+  position:absolute; left:1rem; bottom:1rem;
+  width:96px; height:96px; border-radius:999px;
+  border:2px solid var(--border); overflow:hidden;
+  box-shadow:0 10px 30px rgba(0,0,0,.25);
 }
-.hero-avatar img{
-  width: 100%; height: 100%;
-  object-fit: cover; object-position: center;
-}
-@media (min-width: 768px){
-  .hero-avatar{ width: 120px; height: 120px; left: 3rem; } /* md:p-12 */
-}
-@media (min-width: 1024px){
-  .hero-avatar{ width: 148px; height: 148px; left: 3rem; }
+.hero-avatar img{width:100%; height:100%; object-fit:cover}
+@media (min-width:768px){
+  .hero-avatar{left:2rem; bottom:2rem; width:120px; height:120px}
 }
 
-/* ===========================
-   Proyectos (grid placeholder)
-   =========================== */
-/* Proyectos: grid fluida y a prueba de “quiebres” */
-.projects{
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+/* ===== Timeline ===== */
+.timeline{position:relative; padding-left:1rem;}
+.timeline:before{
+  content:""; position:absolute; left:.35rem; top:.2rem; bottom:.2rem;
+  width:2px; background:linear-gradient(var(--border), rgba(255,255,255,.06), var(--border));
+  border-radius:2px;
 }
-.project-img{
-  width: 100%;
-  height: 180px;
-  border-radius: .9rem;
-  background-color: #0E1430;
-  border: 1px dashed #28315A;
-  display: grid;
-  place-items: center;
-  color: #CAD0E6;
-  font-size: .85rem;
+.timeline-item{position:relative; padding-left:1.25rem; margin:.9rem 0;}
+.timeline-dot{
+  position:absolute; left:-.05rem; top:.35rem;
+  width:.55rem; height:.55rem; border-radius:999px;
+  background:var(--brand); box-shadow:0 0 0 3px rgba(139,92,246,.15);
 }
-.card{ min-width: 0; } /* evita desbordes de contenido dentro de las tarjetas */
+.timeline-meta{color:var(--muted); font-size:.85rem; margin-top:.15rem}
 
+/* ===== Modal (oculto por Tailwind con .hidden) ===== */
+#modal-formacion .card{backdrop-filter:saturate(120%) blur(6px)}
+
+/* ===== Utilities extras ===== */
+.header a:hover{color:var(--brand)}
+.footer a:hover{color:var(--brand)}
+
+/* ===== Accessibility tweaks ===== */
+:focus-visible{outline:2px solid var(--brand); outline-offset:2px}
+
+/* ===== Tables (si usas grids como tabla) ===== */
+.projects img{background:#0f1016}
