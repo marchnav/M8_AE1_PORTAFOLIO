@@ -45,61 +45,8 @@ PORTAFOLIO/
 ```
 
 
-## 🚀 Puesta en marcha (local)
-1. **Clonar e instalar:**
-   ```bash
-   git clone <URL_DEL_REPO>
-   cd PORTAFOLIO
 
-   # crear y activar venv
-   python -m venv .venv
-   # Windows
-   .venv\Scripts\activate
-   # Linux/macOS
-   # source .venv/bin/activate
-
-   pip install --upgrade pip
-   pip install -r requirements.txt  # si existe
-   # o bien:
-   pip install django
-   ```
-
-2. **Variables de entorno (.env)**
-   Crea un archivo `.env` (no se versiona) con al menos:
-   ```env
-   DEBUG=True
-   SECRET_KEY=pon-aqui-una-clave-segura
-   ALLOWED_HOSTS=127.0.0.1,localhost
-   ```
-
-3. **Migraciones y runserver**
-   ```bash
-   python manage.py migrate
-   python manage.py runserver
-   ```
-   Visita: http://127.0.0.1:8000
-
-
-## 🧪 Datos y administración
-- (Opcional) crea un **superusuario** si usas el admin:
-  ```bash
-  python manage.py createsuperuser
-  ```
-- Admin: `http://127.0.0.1:8000/admin/`
-
-
-## 🔐 Seguridad y buenas prácticas
-- **Secretos y llaves** en `.env` (nunca en Git).
-- **DEBUG=False** en producción + `ALLOWED_HOSTS` bien configurado.
-- Configurar **headers de seguridad y CSP** en el servidor NGINX (ejemplos: bloque XSS/Clickjacking, `Content-Security-Policy`, `X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy`).
-- Usar `collectstatic` si sirves estáticos desde NGINX:
-  ```bash
-  python manage.py collectstatic
-  ```
-- **Backups** de BD/archivos y **logs** rotados en producción.
-
-
-## 🧾 Cumplimiento M8_AE1 (resumen)
+## 🧾 Cumplimiento M8 (resumen)
 - **Sitio responsive** con página principal y secciones de proyectos y detalle.
 - **Código organizado** con `base.html` y templates modulares.
 - **Buenas prácticas** de seguridad y despliegue documentadas.
@@ -107,14 +54,8 @@ PORTAFOLIO/
 - **Readme** con instrucciones claras de instalación, uso y despliegue.
 
 
-## 🌐 Despliegue (guía breve)
-1. VPS con Ubuntu + NGINX + Certbot (HTTPS).
-2. Clonar repo, crear **venv** y `.env`.
-3. Instalar dependencias y configurar **Gunicorn**/**Uvicorn** + **systemd**.
-4. NGINX como reverse proxy + static y media (si aplica).
-5. Activar **CSP y headers de seguridad**.
-
-*(Si lo deseas, puedo dejarte un bloque NGINX base con CSP para `dataprospectiva.cl` o `noone.cl`.)*
+## 🌐 Despliegue 
+1. GitHub pages
 
 
 ## 📜 Licencia y uso de marcas
