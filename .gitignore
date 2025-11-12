@@ -1,0 +1,70 @@
+# === SO / Editor ===
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# === Python / Django ===
+__pycache__/
+*.py[cod]
+*.log
+
+# Entornos virtuales
+.venv/
+venv/
+env/
+
+# Base de datos local
+db.sqlite3
+*.sqlite3
+
+# Archivos/dirs de compilación/artefactos
+build/
+dist/
+*.egg-info/
+
+# Archivos temporales de tests y cobertura
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Archivos de configuración/secrets (ajusta si usas otros nombres)
+.env
+*.env
+.env.*.local
+*.key
+*.pem
+*.p12
+*.crt
+*.csr
+*.der
+
+# Archivos de runtime/media (no versionar subidas de usuarios)
+media/
+#subcarpetas específicas para evidencias o exportaciones:
+exports/
+backups/
+tmp/
+
+# Static: NO ignorar tu carpeta fuente `static/`.
+# Ignora únicamente colecciones de collectstatic:
+staticfiles/
+static_root/
+static-collected/
+
+# Reportes y notebooks temporales
+*.ipynb_checkpoints
+*.bak
+*.tmp
+
+# Sistema de OS/Terminal
+nohup.out
+
+
+# === Git ===
+# Mantener explícitamente estos archivos en repo
+!LICENSE
+!.gitignore

@@ -1,0 +1,135 @@
+LICENCIA DE USO — TODOS LOS DERECHOS RESERVADOS
+================================================
+
+Copyright (c) 2025, Marcelo Navarrete.
+Todos los derechos reservados.
+
+1) Ámbito de aplicación (incluye Data Prospectiva y NoOne)
+----------------------------------------------------------
+Esta licencia aplica a **todo el Repositorio** y a **todos sus proyectos y subcarpetas**,
+incluyendo —sin limitarse a— cualquier material relacionado con:
+- **Data Prospectiva SPA** (sitio, blog, diseños, contenidos y arte asociado; dominio: **dataprospectiva.cl**).
+- **NoOne** (landing, diseños, copys, piezas gráficas, UI kit y arte asociado; dominio: **noone.cl**).
+
+La protección comprende **código, documentación, imágenes, videos, audios, diseños, logotipos,
+nombres comerciales, marcas, paletas y guías de estilo** asociadas a **Data Prospectiva SPA** y **NoOne**,
+así como cualquier otra marca o proyecto presente en este Repositorio.
+
+2) Titularidad y derechos reservados
+------------------------------------
+Salvo indicación expresa en un archivo o carpeta con licencia distinta y firmada, el contenido es de
+titularidad exclusiva de **Marcelo Navarrete**. Cuando corresponda, **Data Prospectiva SPA** y/o **NoOne**
+son **co‑titulares** o **licenciante/s** del material incorporado (especialmente signos distintivos,
+identidad visual, copys comerciales y piezas de comunicación). **No** se transfiere propiedad intelectual
+por el mero acceso o lectura del Repositorio.
+
+3) Permiso limitado para evaluación (Skillnest)
+-----------------------------------------------
+Se otorga a **Skillnest** y a su equipo evaluador un permiso **limitado, no exclusivo, intransferible y
+revocable** para **leer, revisar y ejecutar** el código **exclusivamente** con fines de evaluación del
+Bootcamp: **Programa Especial “Talento Digital Para Chile”, Becas Laborales 2024, Desarrollo de Aplicaciones Full Stack Python. en adelante: **El bootcamp** ** Este permiso **NO** incluye: copiar, clonar, forkar, distribuir, divulgar, publicar, subir a
+plataformas públicas, sublicenciar, usar comercialmente ni crear obras derivadas, salvo **autorización
+previa y por escrito** del titular.
+
+4) Contenidos de Data Prospectiva SPA y NoOne
+---------------------------------------------
+- **Marcas, logotipos, isotipos, nombres comerciales y trade dress** de Data Prospectiva SPA y NoOne:
+  **uso prohibido** sin autorización escrita.
+- **Imágenes, fotografías, banners, ilustraciones, íconos, videos y audios** relacionados con ambas marcas:
+  **no** se permite copiar, reutilizar, adaptar, extraer ni re‑publicar.
+- **Copys, piezas de contenido, estructuras de navegación, maquetas y guías de estilo**: protegidas como
+  obra y/o como material comercial. **No** se autoriza su uso, imitación o aprovechamiento competitivo.
+- Se prohíbe el uso de estas marcas o contenidos para **simulación de servicios**, **ventas**, **promoción**,
+  **portafolios de terceros**, cursos o demostraciones ajenas al proceso de evaluación indicado.
+
+5) Restricciones generales (repositorio completo)
+-------------------------------------------------
+Sin autorización **previa y por escrito** del titular, queda **PROHIBIDO**:
+- Copiar, clonar, forkar, distribuir, publicar, indexar o poner a disposición de terceros el contenido.
+- Modificar, transformar, refactorizar, descompilar, hacer ingeniería inversa o crear obras derivadas.
+- Integrar total o parcialmente el **código** o los **activos** en otros proyectos, cursos o productos.
+- Usar el contenido con fines comerciales, publicitarios, formativos, demostrativos o promocionales ajenos
+  a la evaluación indicada.
+- Realizar **text/data mining**, scraping, extracción masiva de datos o **entrenamiento de modelos de IA**
+  (incluye fine‑tuning, embeddings y cualquier forma de aprendizaje automático) con archivos o datos del
+  Repositorio.
+- Remover o alterar avisos de derechos, marcas y metadatos de propiedad/gestión.
+- **Hotlinking** a imágenes, videos o archivos estáticos del Repositorio.
+
+6) Carpetas y ejemplos de cobertura
+-----------------------------------
+La protección cubre, a modo ejemplar y **no taxativo**:
+- `/data-prospectiva/`, `/dataprospectiva/`, `/dp/`, `/blog/`, `/assets/` y `/docs/` vinculados a **Data Prospectiva SPA**.
+- `/noone/`, `/no-one/`, `/landing/`, `/brand/`, `/assets/` y `/docs/` vinculados a **NoOne**.
+- Cualquier otra carpeta del Repositorio que contenga material de dichas marcas o de otros proyectos del titular.
+
+7) Contenidos audiovisuales y YouTube (imágenes y videos)
+---------------------------------------------------------
+7.1 **Titularidad y alcance**  
+Todos los **videos, imágenes, miniaturas (thumbnails)**, pistas de audio y material audiovisual incluidos
+o referenciados en este Repositorio son de **titularidad** de Marcelo Navarrete y/o de Data Prospectiva SPA
+y/o NoOne, o se utilizan bajo **licencias** válidas. Salvo autorización escrita, se prohíbe su copia, descarga,
+re‑subida, extracción de frames, remezcla, edición o comunicación pública fuera de los usos permitidos abajo.
+
+7.2 **Embeds y enlaces a YouTube**  
+Cuando el Repositorio o los entregables de cada actividad del bootcamp incluya **embeds** o enlaces a videos alojados en **YouTube**:
+- El visionado debe realizarse **exclusivamente** a través del reproductor de YouTube o del **embed** provisto.
+- Queda **prohibida** cualquier forma de descarga, re‑subida, re‑transmisión, extracción de audio o de frames,
+  y la inserción en reproductores no autorizados.
+- El uso está sujeto a los **Términos del Servicio de YouTube** (https://www.youtube.com/t/terms) y, si aplica,
+  a los **Términos de los Servicios de API de YouTube** (https://developers.google.com/youtube/terms) y a la
+  **Política de Directrices de la Comunidad** (https://www.youtube.com/howyoutubeworks/policies/community-guidelines/).
+- Cualquier **monetización**, explotación comercial o uso promocional de los videos sin consentimiento **está prohibido**.
+
+7.3 **Miniaturas e imágenes asociadas**  
+Las miniaturas, capturas y demás imágenes vinculadas a los videos son **obras protegidas**. No se permite su
+descarga, reutilización, adaptación, ni su uso como parte de otros materiales, cursos, portafolios o publicaciones.
+
+7.4 **Contenido de terceros**  
+Si un video incorpora material de terceros, dicho material puede estar sujeto a **derechos adicionales**. Nada en
+esta licencia concede derechos sobre contenidos de terceros. En caso de duda, **solicite permiso** al titular
+correspondiente.
+
+7.5 **Takedown y Content ID**  
+Usted se compromete a **no** disputar reclamaciones válidas de Content ID ni a eludir sistemas de gestión de
+derechos. Ante un uso indebido, el titular podrá iniciar **reclamaciones**, requerir **baja de contenidos** y
+emprender acciones legales según corresponda.
+
+8) Confidencialidad y medidas tecnológicas
+------------------------------------------
+Cuando el Repositorio (o partes) o entregables de actividades del bootcamp contenga configuración, diagramas, evidencias de seguridad, CSPs, headers,
+scripts de despliegue u otros materiales sensibles, estos pueden considerarse **confidenciales**. Se prohíbe su
+divulgación. Queda prohibido eludir o interferir con medidas tecnológicas de protección, controles de acceso o
+mecanismos de gestión de derechos.
+
+9) Ausencia de garantía
+-----------------------
+El Repositorio se entrega “**TAL CUAL**”, sin garantías, expresas o implícitas, incluyendo comerciabilidad,
+idoneidad para un propósito particular o no infracción. El titular no será responsable por daños o pérdidas
+derivados del uso o imposibilidad de uso del contenido, en la medida máxima permitida por ley.
+
+10) Terminación
+---------------
+Cualquier incumplimiento implicará la **terminación inmediata** del permiso limitado y habilitará las acciones
+legales pertinentes, incluyendo solicitud de retiro de copias, forks o redistribuciones no autorizadas.
+
+11) Ley aplicable y jurisdicción
+--------------------------------
+Salvo pacto expreso en contrario, esta licencia se rige por las leyes de la **República de Chile**, y toda
+controversia será sometida a los tribunales ordinarios de justicia con asiento en **Valdivia, Chile**.
+
+12) Contacto para permisos y notificaciones
+-------------------------------------------
+Solicitudes, autorizaciones y notificaciones (incluido **takedown**): **Marcelo Navarrete** — marcelonavarretey@gmail.com
+
+---
+**Nota:** Esta es una licencia **restrictiva** (Todos los derechos reservados). Si requieres una licencia
+diferente (p. ej., MIT, BSD, Apache‑2.0) para alguna pieza puntual, deberás obtener autorización **previa,
+expresa y por escrito** del titular.
+
+Anexo A — Aviso breve para inclusión en archivos
+------------------------------------------------
+
+Copyright (c) 2025, Marcelo Navarrete. Todos los derechos reservados.
+Uso restringido. Prohibida la copia, distribución, comunicación pública, modificación,
+entrenamiento de IA y reutilización de activos sin autorización escrita del titular.
