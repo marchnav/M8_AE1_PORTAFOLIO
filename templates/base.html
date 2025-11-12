@@ -46,7 +46,11 @@
   <a class="hover:text-[var(--brand)]" href="/#perfil">Perfil profesional</a>
   <a class="hover:text-[var(--brand)]" href="/#formacion">Formación</a>
   <a class="hover:text-[var(--brand)]" href="/#proyectos">Proyectos destacados</a>
-  <a class="hover:text-[var(--brand)]" href="/#contacto">Contacto</a>
+  <a class="hover:text-[var(--brand)] text-yellow-300"
+   href="https://wa.me/56957309867"
+   target="_blank" rel="noopener"
+   aria-label="Contactar por WhatsApp">Contacto</a>
+
 </nav>
 
 <!-- Menú móvil -->
@@ -71,30 +75,62 @@
   <footer id="contacto" class="footer border-t mt-12" role="contentinfo">
     <div class="container py-8 grid gap-4 md:grid-cols-3 text-sm">
       <div>
-        <p class="font-semibold">Marcelo Navarrete</p>
-        <p class="muted">Full-Stack (Django) · IA aplicada · Compliance</p>
+        <p class="font-semibold">Marcelo Navarrete Yáñez</p>
+        <p class="muted">Ingeniero en administración pública y municipal </p>
+        <p class="muted">Full-Stack (Django) · IA aplicada · Compliance </p>
+        <p class="mt-2">
+  <a class="hover:text-[var(--brand)]" href="https://dataprospectiva.cl" target="_blank" rel="noopener">dataprospectiva.cl</a>
+  <br>
+  <a class="hover:text-[var(--brand)]" href="https://noone.cl" target="_blank" rel="noopener">noone.cl</a>
+</p>
+
       </div>
+      
       <div>
         <p class="font-semibold">Enlaces</p>
         <ul class="mt-2 space-y-1">
-          <li><a class="hover:text-[var(--brand)]" href="#perfil">Perfil profesional</a></li>
-          <li><a class="hover:text-[var(--brand)]" href="#proyectos">Proyectos destacados</a></li>
-          <li><a class="hover:text-[var(--brand)]" href="#resumen">Resumen profesional</a></li>
-        </ul>
+  <li><a class="hover:text-[var(--brand)]" href="/#sobre-mi">Sobre mí</a></li>
+  <li><a class="hover:text-[var(--brand)]" href="/#perfil">Perfil profesional</a></li>
+  <li><a class="hover:text-[var(--brand)]" href="/#formacion">Formación</a></li>
+  <li><a class="hover:text-[var(--brand)]" href="/#proyectos">Proyectos destacados</a></li>
+  <li><a class="hover:text-[var(--brand)]" href="/#contacto">Contacto</a></li>
+</ul>
+
       </div>
       <div>
         <p class="font-semibold">Contacto</p>
-        <p class="muted">Correo: <a class="hover:text-[var(--brand)]" href="mailto:marcelonavarretey@gmail.com">marcelonavarretey@gmail.com</a></p>
+        <p class="muted">📧 <a class="hover:text-[var(--brand)]" href="mailto:marcelonavarretey@gmail.com">marcelonavarretey@gmail.com</a></p>
+        <p class="muted">📧 <a class="hover:text-[var(--brand)]" href="mailto:marcelonavarretey@gmail.com">contacto@dataprospectiva.cl</a></p>
+        <p class="muted">📲
+  <a class="hover:text-[var(--brand)]"
+     href="https://wa.me/56957309867"
+     target="_blank" rel="noopener"
+     aria-label="Chatear por WhatsApp con Marcelo">
+    +56 9 5730 9867
+  </a>
+</p>
+
+        <p class="muted">📍 <a class="hover:text-[var(--brand)]" href="mailto:marcelonavarretey@gmail.com">Valdivia - Puerto Varas - Chile</a></p>
       </div>
     </div>
     <div class="border-t" style="border-color: var(--border);">
       <div class="container py-4 text-xs muted">
-        © {{ now|date:"Y" }} Marcelo Navarrete — Portafolio.
-      </div>
+  © {% now "Y" %} Marcelo Navarrete - Portafolio desarrollado con ❤️ desde el Sur de Chile.
+</div>
+
     </div>
   </footer>
+    <!-- Botón flotante WhatsApp -->
+
+
+
+
+  <!-- JS propio (debe ir después del botón) -->
+  <script src="{% static 'js/app.js' %}"></script>
+
 
   <!-- JS propio -->
   <script src="{% static 'js/app.js' %}"></script>
+  
 </body>
 </html>

@@ -101,3 +101,5 @@ console.log('app.js cargado ✅');
     if (e.key === 'Escape') closeMenu();
   });
 })();
+
+
