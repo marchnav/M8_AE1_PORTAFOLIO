@@ -186,7 +186,7 @@ h1, h2, h3{
     linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.45)),                 /* overlay oscuro encima */
     radial-gradient(1000px 500px at 0% 0%, rgba(139,92,246,.18), transparent 60%), /* tintas decorativas */
     radial-gradient(900px 500px at 100% 20%, rgba(34,211,238,.18), transparent 55%),
-    url("../img/portada_definitiva_x.png") center/cover no-repeat;            /* IMAGEN DE FONDO (capa inferior) */
+    url("./img/portada_definitiva_x.png") center/cover no-repeat;            /* IMAGEN DE FONDO (capa inferior) */
 }
 .hero.has-portada .overlay{ display:none; } /* ya no es necesaria con el overlay en background */
 
